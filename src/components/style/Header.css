@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  flex-direction: row; /* Ensure items are aligned in a row */
+  justify-content: left; 
+  padding: 10px;
+  background-color: #333;
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: color 0.3s;
+}
+
+.header-link:hover {
+  color: #ddd;
+}
+
+/* Active Link Styling */
+.header-link:active {
+  color: #e63946; /* Darker shade for click effect */
+}
+
+/* Styling for Aditya Pandya */
+.header-link:first-child {
+  font-size: 2em; /* Make Aditya Pandya larger */
+  color: blue; /* Change color to blue */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .header-link {
+    margin: 8px 0;
+    font-size: 1em;
+  }
+
+  /* Keep Aditya Pandya larger and blue even on small screens */
+  .header-link:first-child {
+    font-size: 1.5em;
+    color: blue;
+  }
+}

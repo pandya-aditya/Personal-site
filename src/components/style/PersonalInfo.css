@@ -1,0 +1,107 @@
+
+#personal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 80%;
+  margin-bottom: 20px;
+}
+
+.text-section {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  white-space: nowrap; /* Prevents the title from wrapping */
+  overflow: hidden; /* Hides the text that overflows */
+  border-right: 3px solid #333; /* Creates a cursor-like effect */
+  width: 0;
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Keyframes for typing effect */
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+/* Keyframes for cursor blink effect */
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+
+/* Make the cursor disappear after typing animation */
+.title {
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end 3s infinite;
+}
+
+.title.typing-done {
+  border-color: transparent; /* Hide cursor after typing */
+  animation: typing 3s steps(30) 1s forwards; /* Only typing animation */
+}
+
+.details {
+  font-size: 2rem;
+  color: #555;
+}
+
+.photo-container {
+  flex-shrink: 0;
+  margin-left: 75px;
+}
+
+.profile-photo {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  text-decoration: none;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 12px;
+  font-size: 30px;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.icon-button:hover {
+  background-color: blue;
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 20px;
+}

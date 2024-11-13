@@ -1,0 +1,115 @@
+.experience-container {
+  padding: 20px;
+  width: 70%;
+  margin: auto;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+  border-left: 2px solid #ccc;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  position: relative;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.2s;
+}
+
+.timeline-item.active {
+  animation: fadeInUp 0.5s forwards;
+}
+
+.timeline-item:hover {
+  transform: translateX(5px);
+}
+
+.timeline-item .timeline-details {
+  font-size: 14px;
+  color: #d2e8ff;
+  margin-top: 10px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+.timeline-item.selected .timeline-details {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -13px;
+  width: 15px;
+  height: 15px;
+  background-color: #333;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.timeline-item:hover .timeline-dot {
+  background-color: #007bff;
+}
+
+.timeline-content {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.timeline-item:hover .timeline-content {
+  background-color: #333b42;
+}
+
+.timeline-date {
+  font-size: 14px;
+  color: #666;
+}
+
+.timeline-description {
+  margin: 8px 0;
+}
+
+.timeline-image {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  margin-left: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initial state before the animation is triggered */
+.timeline-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.2s;
+}
+
+.timeline-item.active, /* Stay visible with fade-in animation on scroll */
+.timeline-item.selected { /* Ensure selected item is always visible */
+  animation: fadeInUp 0.5s forwards;
+  opacity: 1;
+  transform: translateY(0);
+}
