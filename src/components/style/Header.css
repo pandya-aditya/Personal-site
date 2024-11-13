@@ -1,11 +1,24 @@
+/* Styling for the header */
 .header {
   display: flex;
-  flex-direction: row; /* Ensure items are aligned in a row */
+  flex-direction: row;
   justify-content: left;
   padding: 10px;
   background-color: #333;
 }
 
+/* Menu Button for smaller screens */
+.menu-button {
+  display: none; /* Hide by default */
+  font-size: 2em;
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Links */
 .header-link {
   color: white;
   text-decoration: none;
@@ -13,27 +26,31 @@
   transition: color 0.3s;
 }
 
+/* Header link hover effect */
 .header-link:hover {
   color: #ddd;
 }
 
-/* Active Link Styling */
+/* Active link style */
 .header-link:active {
-  color: #e63946; /* Darker shade for click effect */
+  color: #e63946;
 }
 
-/* Styling for Aditya Pandya */
+/* Aditya Pandya specific styles */
 .header-link:first-child {
-  font-size: 2em; /* Make Aditya Pandya larger */
-  color: blue; /* Change color to blue */
+  font-size: 2em;
+  color: blue;
 }
 
-/* Responsive Styling */
+/* Responsive styling for smaller screens */
 @media (max-width: 768px) {
+  /* Hide the entire header on small screens */
   .header {
-    flex-direction: column; /* Stack links vertically */
-    align-items: flex-start; /* Align links to the left */
-    padding: 15px;
+    display: none; /* Hide the header container */
+  }
+
+  .menu-button {
+    display: block; /* Show the button */
   }
 
   .header-link {
@@ -41,9 +58,18 @@
     font-size: 1em;
   }
 
-  /* Keep Aditya Pandya larger and blue even on small screens */
   .header-link:first-child {
     font-size: 1.5em;
     color: blue;
+  }
+
+  .menu {
+    display: none; /* Initially hide the menu */
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu.open {
+    display: flex; /* Show the menu when open */
   }
 }
