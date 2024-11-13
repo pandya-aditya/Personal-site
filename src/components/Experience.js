@@ -22,7 +22,7 @@ const experienceData = [
     title: "Software Solutions Intern",
     company: "Bruce Power",
     date: "February 2023 - June 2023",
-    description: "Led large-scale technology updates and software installations...",
+    description: "The job involves managing and overseeing technology updates, installations, and troubleshooting, while ensuring smooth system functionality and resolving user-related issues.",
     details: "Led a major legacy technology removal project, updating over 10,000 infrastructure items, installing critical software on 400+ computers, and conducting quality assurance testing with detailed reports on bugs and improvements. Worked with IT technicians to install and update technology, resolving user software issues.",
     image: `${process.env.PUBLIC_URL}/images/bruce-power.png`,
   },

@@ -3,6 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center; /* Center cards on smaller screens */
 }
 
 /* Project Card Styling */
@@ -37,12 +38,13 @@
   background-color: #0070f3;
   color: #fff;
   border-radius: 4px;
-  text-decoration: none;
+  text-decoration: none; /* Removes underline */
   transition: background-color 0.3s;
 }
 
 .learn-more-button:hover {
   background-color: #005bb5;
+  text-decoration: none; /* Ensures no underline on hover */
 }
 
 /* Hover Overlay Styling */
@@ -59,4 +61,26 @@
   justify-content: center;
   border-radius: 8px;
   font-size: 0.9rem;
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+  .project-card {
+    width: 100%; /* Full width on smaller screens */
+    margin: 0 auto; /* Center card */
+    max-width: 300px; /* Max width for readability */
+  }
+
+  .learn-more-button {
+    font-size: 0.9rem; /* Smaller font size on mobile */
+    padding: 6px 10px; /* Adjust padding */
+  }
+
+  .project-media {
+    height: 200px; /* Smaller image height */
+  }
+
+  .hover-overlay {
+    font-size: 0.8rem; /* Smaller font size on overlay for mobile */
+  }
 }

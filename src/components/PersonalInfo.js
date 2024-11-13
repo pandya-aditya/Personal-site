@@ -49,7 +49,7 @@ const PersonalInfo = () => {
                     className="social-link"
                 >
                     <button className="icon-button">
-                        <FaLinkedin className="icon" />
+                        <FaLinkedin className="icon"/>
                         LinkedIn
                     </button>
                 </a>

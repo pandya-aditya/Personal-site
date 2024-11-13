@@ -4,6 +4,7 @@
   margin: auto;
 }
 
+/* Timeline structure */
 .timeline {
   position: relative;
   padding-left: 40px;
@@ -89,6 +90,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Fade-in animation */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -112,4 +114,43 @@
   animation: fadeInUp 0.5s forwards;
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Responsive styling for mobile */
+@media (max-width: 768px) {
+  .experience-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column; /* Stack content vertically */
+    align-items: flex-start;
+  }
+
+  .timeline-date {
+    font-size: 12px;
+  }
+
+  .timeline-content {
+    padding: 10px;
+  }
+
+  .timeline-description {
+    font-size: 13px;
+  }
+
+  .timeline-image {
+    width: 100%;
+    height: auto;
+    margin: 10px 0 0 0;
+  }
+
+  .timeline-item .timeline-details {
+    font-size: 12px;
+  }
 }

@@ -18,6 +18,7 @@ html {
 #projects { background: black; }
 #experience { background: black; }
 #resume { background: black; }
+
 /* Header styles */
 .header {
   position: fixed;
@@ -39,4 +40,26 @@ html {
 
 .header-link:hover {
   color: #ff6b6b;
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  /* Reduce padding and font size for better readability on small screens */
+  .content section {
+    padding: 20px;
+    font-size: 1.2em;
+  }
+
+  /* Stack header links vertically and add padding */
+  .header {
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+  }
+
+  /* Style header links for easier tap selection */
+  .header-link {
+    padding: 10px 0;
+    font-size: 1em;
+  }
 }

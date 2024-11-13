@@ -1,7 +1,7 @@
 .header {
   display: flex;
   flex-direction: row; /* Ensure items are aligned in a row */
-  justify-content: left; 
+  justify-content: left;
   padding: 10px;
   background-color: #333;
 }
@@ -31,8 +31,9 @@
 /* Responsive Styling */
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    padding: 10px;
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start; /* Align links to the left */
+    padding: 15px;
   }
 
   .header-link {
